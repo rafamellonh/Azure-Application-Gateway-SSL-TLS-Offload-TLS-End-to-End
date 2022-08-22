@@ -99,3 +99,5 @@ __Criar Application Gateway SSL/TLS Offload__
 ![appfw05](Images/appfw05.png)
 ![appfw06](Images/appfw06.png)
 ![appfw07](Images/appfw07.png)
+![appfw08](Images/appfw08.png)
+![appfw09](Images/appfw09.png)

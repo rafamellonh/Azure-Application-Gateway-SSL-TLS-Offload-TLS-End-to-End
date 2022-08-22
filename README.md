@@ -28,3 +28,9 @@ O usuário acesso a aplicação pelo endereço da mesma e quando chegar no Appli
 
 Todo processo de descriptografia e criptografia é realizado pelo Appliction Gateway, assim não sobrecarregando os servidores de backend.
 ![appfw02](Images/appfw02.png)
+
+# TLS End-To-End
+
+O processo entre o usuário e o Application Gateway continua o mesmo.
+
+![appfw03](Images/appfw03.png)

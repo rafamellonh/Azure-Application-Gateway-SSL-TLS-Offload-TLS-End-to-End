@@ -36,7 +36,7 @@ __Criar duas VMs em zonas diferentes__
 VM01 :
 esource group - RGAPP
 Virtual machine - VM01
-Region -Brazil South
+Region - Brazil South
 Availability options
 Availability zone
 Availability zone 1
@@ -53,7 +53,7 @@ NIC network security group - None
 VM02 : 
 esource group - RGAPP
 Virtual machine - VM02
-Region -Brazil South
+Region - Brazil South
 Availability options
 Availability zone
 Availability zone 3
@@ -72,7 +72,7 @@ NIC network security group - None
 __Criar um NSG e associar a SUBNET-PRD01__
 ```
 Resource group - RGAPP
-Region -Brazil South
+Region - Brazil South
 name - NSG01
 ```
 

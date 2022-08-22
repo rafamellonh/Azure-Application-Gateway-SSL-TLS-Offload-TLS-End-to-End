@@ -99,3 +99,5 @@ O deploy do Appplication Gateway foi divido em duas novas páginas
 
 
 SSL/TLS OffLoad [SSL/TLS OffLoad](https://github.com/rafamellonh/Azure-Application-Gateway-SSL-TLS-Offload-TLS-End-to-End/blob/main/AppGwOffload.md).
+
+TLS End to End [TLS End to End](https://github.com/rafamellonh/Azure-Application-Gateway-SSL-TLS-Offload-TLS-End-to-End/blob/main/AppGwOffload.md)

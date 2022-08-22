@@ -75,3 +75,21 @@ Resource group - RGAPP
 Region -Brazil South
 name - NSG01
 ```
+
+__Criar o bastion para realizar a conexão nos computadores__
+
+```
+Basics
+Name - BST01
+
+Resource group - RGAPP
+Region - Brazil South
+Virtual network - VNET01
+Subnets - AzureBastionSubnet
+Public IP address - PIP-BST01
+Tier - Standard
+Instance count - 2
+Copy and paste - Enabled
+
+```
+

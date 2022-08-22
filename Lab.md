@@ -98,4 +98,4 @@ O deploy do Appplication Gateway foi divido em duas novas páginas
 
 
 
-You may be using [Markdown Live Preview](https://github.com/rafamellonh/Azure-Application-Gateway-SSL-TLS-Offload-TLS-End-to-End/blob/main/AppGwOffload.md).
+SSL/TLS OffLoad [SSL/TLS OffLoad](https://github.com/rafamellonh/Azure-Application-Gateway-SSL-TLS-Offload-TLS-End-to-End/blob/main/AppGwOffload.md).

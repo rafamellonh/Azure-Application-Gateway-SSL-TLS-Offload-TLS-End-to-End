@@ -1,0 +1,2 @@
+location = "brazilsouth"
+env = "Dev"

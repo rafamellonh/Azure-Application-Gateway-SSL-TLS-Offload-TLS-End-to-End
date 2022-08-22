@@ -29,11 +29,12 @@ Criar um RG e uma Virtual Network com 3 subnet's.
 * Resource group  - RGAPP
 * Region -Brazil South
 * VNET01 10.100.0.0/16
-* SUB-PRD01 (10.100.1.0/24),SUB-APPWG (10.100.250.0/24),AzureBastionSubnet (10.100.251.0/26)
+* SUB-PRD01 (10.100.1.0/24), SUB-APPWG (10.100.250.0/24), AzureBastionSubnet (10.100.251.0/26)
 
 Criar duas VMs em zonas diferentes
 ```
-Resource group - RGAPP
+VM01 :
+esource group - RGAPP
 Virtual machine - VM01
 Region -Brazil South
 Availability options
@@ -43,11 +44,26 @@ Image - Windows Server 2022 Datacenter: Azure Edition - Gen2
 Size - Standard D2s v3 (2 vcpus, 8 GiB memory)
 Username - rafael.admin
 
-
 Networking
 Virtual network - VNET01
-Subnet -SUB-APPWG (10.100.250.0/24)
+Subnet - SUB-PRD01 (10.100.1.0/24)
 Public IP - None
 NIC network security group - None
 
+VM02 : 
+esource group - RGAPP
+Virtual machine - VM02
+Region -Brazil South
+Availability options
+Availability zone
+Availability zone 3
+Image - Windows Server 2022 Datacenter: Azure Edition - Gen2
+Size - Standard D2s v3 (2 vcpus, 8 GiB memory)
+Username - rafael.admin
+
+Networking
+Virtual network - VNET01
+Subnet - SUB-PRD01 (10.100.1.0/24)
+Public IP - None
+NIC network security group - None
 ```

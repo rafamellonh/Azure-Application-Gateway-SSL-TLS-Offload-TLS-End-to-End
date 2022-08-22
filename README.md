@@ -11,3 +11,13 @@ O Application Gateway é um balanceador de carga regional e poder ser utilizado 
 
 O Application Gateway fornece recursos de seguranç como Web Application Firewall (WAF), suporte para criptografia TLS/SSL do tráfego entre 
 usuários e aplication gateway (SSL/TLS OffLoad), bem como entre os servidores da sua aplicação e o application gateway
+
+# Estrutura do Application Gateway
+
+* Frontend IP
+* Listener
+* Rules
+* HTTP Settings
+* Backend Pool
+
+![appfw01](Images/appfw01.png)

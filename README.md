@@ -31,6 +31,6 @@ Todo processo de descriptografia e criptografia é realizado pelo Appliction Gat
 
 # TLS End-To-End
 
-O processo entre o usuário e o Application Gateway continua o mesmo.
+O processo entre o usuário e o Application Gateway continua o mesmo. Depois de entrar no Application Gateway(descriptografa e criptografa) a requisição é enviada para a regra que tem um HTTP Settings e que "conversa" com o BackendPool na porta 443 utlisando um certificado (certificado esse que pode ser interno) 
 
 ![appfw03](Images/appfw03.png)

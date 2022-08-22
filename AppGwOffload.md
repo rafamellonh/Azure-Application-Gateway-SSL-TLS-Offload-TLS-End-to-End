@@ -7,6 +7,10 @@ __Criar Application Gateway SSL/TLS Offload__
 ![appfw08](Images/appfw08.png)
 ![appfw09](Images/appfw09.png)
 
+__Configurar PROBE__
+
+![probe01](Images/probe.png)
+
 __Instalar IIS nas VMs e configurar o DNS para apontar para o IP do Application Gateway__
 
 ![IIS01](Images/IIS01.png)

@@ -35,5 +35,5 @@ O processo entre o usuário e o Application Gateway continua o mesmo. Depois de 
 
 ![appfw03](Images/appfw03.png)
 
-Siga para os Lab's -> (https://github.com/rafamellonh/Azure-Application-Gateway-SSL-TLS-Offload-TLS-End-to-End/blob/main/Lab.md)
+Siga para os  [Lab's ->] (https://github.com/rafamellonh/Azure-Application-Gateway-SSL-TLS-Offload-TLS-End-to-End/blob/main/Lab.md)
 

@@ -1,2 +1,0 @@
-location = "brazilsouth"
-env = "Dev"

@@ -26,4 +26,5 @@ usuários e aplication gateway (SSL/TLS OffLoad), bem como entre os servidores d
 
 O usuário acesso a aplicação pelo endereço da mesma e quando chegar no Application Gateway, o mesmo irá fazer a descriptografia com o certificado irá encaminhar para a rule e backend sem criptografia e na porta 80, pois já fez o processo de descriptografia e está trafegando "internamente". Após o backend receber o request, ele responde para o Application gateway que irá fazer a criptografia do conteúdo e responder para o usuário já criptografado.
 
+Todo processo de descriptografia e criptografia é realizado pelo Appliction Gateway, assim não sobrecarregando os servidores de backend.
 ![appfw02](Images/appfw02.png)

@@ -93,3 +93,8 @@ Copy and paste - Enabled
 
 ```
 
+__Criar Application Gateway SSL/TLS Offload__
+
+![appfw04](Images/appfw04.png)
+![appfw05](Images/appfw05.png)
+![appfw06](Images/appfw06.png)

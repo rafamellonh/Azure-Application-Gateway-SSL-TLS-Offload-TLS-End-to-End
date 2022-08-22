@@ -21,3 +21,9 @@ usuários e aplication gateway (SSL/TLS OffLoad), bem como entre os servidores d
 * Backend Pool
 
 ![appfw01](Images/appfw01.png)
+
+# SSL/TLS Offload
+
+O usuário acesso a aplicação pelo endereço da mesma e quando chegar no Application Gateway, o mesmo irá fazer a descriptografia com o certificado irá encaminhar para a rule e backend sem criptografia e na porta 80, pois já fez o processo de descriptografia e está trafegando "internamente". Após o backend receber o request, ele responde para o Application gateway que irá fazer a criptografia do conteúdo e responder para o usuário já criptografado.
+
+![appfw02](Images/appfw02.png)

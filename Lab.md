@@ -101,3 +101,7 @@ __Criar Application Gateway SSL/TLS Offload__
 ![appfw07](Images/appfw07.png)
 ![appfw08](Images/appfw08.png)
 ![appfw09](Images/appfw09.png)
+
+__Instalar IIS nas VMs__
+
+![IIS01](Images/IIS01.png)

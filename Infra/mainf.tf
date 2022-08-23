@@ -11,17 +11,16 @@ resource "azurerm_virtual_network" "VNET01" {
   tags = var.tags
   address_space = [ "10.10.0.0/16" ]
   
-  subnet = {
+  subnet  {
     name = "SUB-APPGW"
     address_prefix = "10.10.2.0/24"
   }
-
-  subnet = {
+  subnet  {
     name = "SUB-SRV"
     address_prefix = "10.10.1.0/24"
   }
 
-  subnet = {
+  subnet  {
     name = "AzureBastionSubnet"
     address_prefix = "10.10.250.0/26"
   }

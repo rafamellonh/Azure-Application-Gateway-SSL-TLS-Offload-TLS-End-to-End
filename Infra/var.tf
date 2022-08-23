@@ -1,15 +1,15 @@
 
 variable "location" {
-  type = string
-  default = "brazilsouth"
+  type        = string
+  default     = "brazilsouth"
   description = "Localidade Brazil"
 }
 
 variable "tags" {
-  type = map
+  type = map(any)
   default = {
     env = "Dev"
     Tec = "Rafael"
   }
-  
+
 }

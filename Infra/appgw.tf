@@ -29,14 +29,14 @@ resource "azurerm_application_gateway" "APPGW01" {
     }
 
     backend_http_settings {
-      name = "BackEndSettings"
+      name = "BackEndSettings01"
       cookie_based_affinity = "Disabled"
       port = 80
       protocol = "Http"
      }
 
      http_listener {
-       name = "listener"
+       name = "listener01"
        frontend_ip_configuration_name = "FrontEndIp"
        frontend_port_name = "FrontEndPort"
        protocol = "Http"
@@ -46,7 +46,7 @@ resource "azurerm_application_gateway" "APPGW01" {
       name = "rule01"
       rule_type = "Basic"
       priority = 10
-      http_listener_name = "http_listener"
-      backend_http_settings_name = "backend_http_settings"
+      http_listener_name = "listener01"
+      backend_http_settings_name = "BackEndSettings01"
     }
 }

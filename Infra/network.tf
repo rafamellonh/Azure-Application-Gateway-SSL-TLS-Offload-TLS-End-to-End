@@ -82,6 +82,7 @@ resource "azurerm_network_interface" "NIC-VM02" {
 resource "azurerm_public_ip" "PIP-APPGW01" {
   name = "PIP-APPGW01"
   resource_group_name = azurerm_resource_group.RGAPP.name
-  allocation_method = "Dynamic"
+  allocation_method = "Static"
   location = var.location
+  sku = "Standard"
 }

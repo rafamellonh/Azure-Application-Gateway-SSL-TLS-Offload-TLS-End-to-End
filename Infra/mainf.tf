@@ -46,6 +46,7 @@ resource "azurerm_subnet" "AzureBastionSubnet" {
   address_prefixes     = ["10.10.250.0/26"]
 }
 
+#NICS
 resource "azurerm_network_interface" "NIC-VM01" {
   name                = "NIC-VM01"
   resource_group_name = azurerm_resource_group.RGAPP.name
@@ -59,26 +60,66 @@ resource "azurerm_network_interface" "NIC-VM01" {
   }
 }
 
+resource "azurerm_network_interface" "NIC-VM02" {
+  name                = "NIC-VM02"
+  resource_group_name = azurerm_resource_group.RGAPP.name
+  location            = var.location
+  tags                = var.tags
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.SUB-SRV.id
+    private_ip_address_allocation = "Dynamic"
+  }
+}
+
 # SERVIDORES VIRTUAIS
 resource "azurerm_windows_virtual_machine" "VM01" {
-  name = "VM01"
-  resource_group_name = azurerm_resource_group.RGAPP.name
-  location = var.location
-  tags = var.tags
-  size = "Standard_D2s_V3"
-  admin_username = "rafael.admin"
-  admin_password = "@#abc,123@#"
-  network_interface_ids = [ azurerm_network_interface.NIC-VM01.id, ]
+  name                  = "VM01"
+  resource_group_name   = azurerm_resource_group.RGAPP.name
+  location              = var.location
+  tags                  = var.tags
+  size                  = "Standard_D2s_V3"
+  admin_username        = "rafael.admin"
+  admin_password        = "@#abc,123@#"
+  network_interface_ids = [azurerm_network_interface.NIC-VM01.id, ]
   os_disk {
-    caching = "ReadWrite"
-    storage_account_type = "Premium_ZRS"
+    caching              = "ReadWrite"
+    storage_account_type = "Premium_LRS"
   }
-  
+
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
-    offer = "WindowsServer"
-    sku = "2022-Datacenter"
-    version = "lastest"
+    offer     = "WindowsServer"
+    sku       = "2022-datacenter-g2"
+    version   = "latest"
   }
+
+}
+
+resource "azurerm_windows_virtual_machine" "VM02" {
+  name                  = "VM02"
+  resource_group_name   = azurerm_resource_group.RGAPP.name
+  location              = var.location
+  tags                  = var.tags
+  size                  = "Standard_D2s_V3"
+  admin_username        = "rafael.admin"
+  admin_password        = "@#abc,123@#"
+  network_interface_ids = [azurerm_network_interface.NIC-VM02.id]
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Premium_LRS"
+  }
+
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2022-datacenter-g2"
+    version   = "latest"
+  }
+
+
+
+
 
 }

@@ -1,3 +1,7 @@
-#output "private-ip" {
-#  value = private_ip_address_allocation.VM01.ip_configuration
-#}
+output "private-ip01" {
+  value = azurerm_network_interface.NIC-VM01.private_ip_address
+}
+
+output "private-ip02" {
+  value = azurerm_network_interface.NIC-VM02.private_ip_address
+}

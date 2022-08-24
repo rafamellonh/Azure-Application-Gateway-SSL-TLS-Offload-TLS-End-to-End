@@ -130,8 +130,20 @@ resource "azurerm_windows_virtual_machine" "VM02" {
     version   = "latest"
   }
 
+}
 
+resource "azurerm_virtual_machine_extension" "EXT-IIS01" {
+  name                 = "IIS01"
+  virtual_machine_id   = azurerm_windows_virtual_machine.VM01.id
+  publisher            = "Microsoft.Azure.Extensions"
+  type                 = "CustomScript"
+  type_handler_version = "2.0"
 
-
-
+  settings = <<SETTINGS
+  {
+    "commandToExecute": "Add-WindowsFeature Web-Server -IncludeManagementTools 
+                        remove-item C:\inetpub\wwwroot\iisstart.htm
+                        Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value "LAB APP GW -- $($env:computername)""
+  }
+  SETTINGS
 }

@@ -54,7 +54,7 @@ resource "azurerm_virtual_machine_extension" "EXT-IIS01" {
 
    settings = <<SETTINGS
     {
-        "commandToExecute": "powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value "LAB APP GW -- $($env:computername)"
+        "commandToExecute": "powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"
     }
 SETTINGS
 
@@ -70,7 +70,7 @@ resource "azurerm_virtual_machine_extension" "EXT-IIS02" {
 
   settings = <<SETTINGS
     {
-        "commandToExecute": "powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path "C:\inetpub\wwwroot\Default.htm" -Value "LAB APP GW -- $($env:computername)"
+        "commandToExecute": "powershell Add-WindowsFeature Web-Server; powershell Add-Content -Path \"C:\\inetpub\\wwwroot\\Default.htm\" -Value $($env:computername)"
     }
 SETTINGS
 
